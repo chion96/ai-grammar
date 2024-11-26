@@ -149,9 +149,9 @@ class OllamaProvider implements Provider {
     const response: GenerateResponse | null = await chrome.runtime.sendMessage({
       type: "ollama.generate",
       data: {
-        model: "llama3.1",
+        model: "llama3.2",
         prompt,
-        system: "correct grammar in text, don't add explanations",
+        system: "As a professional editor and proofreader, you will be provided with some text that needs to be checked for spelling and grammar errors. Please make sure to maintain the original meaning and context of the text. If you encounter any errors, please correct them accordingly. Your goal is to produce a high-quality, error-free text that is easy to read and understand. Please provide your corrections in the same format as the original text, ensuring that the corrected text is clear and concise. Do not add any additional explanations or comments.",
       } satisfies GenerateRequest,
     });
 
